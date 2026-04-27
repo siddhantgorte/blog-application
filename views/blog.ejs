@@ -27,7 +27,7 @@
         <div class="container mt-3">
             <h1>Comments <%= comments.length %></h1>
             <% if (locals.user) { %>
-             <form action="/blog/comment/<%= blog._id %>" method="post">
+            <form action="/blog/comment/<%= blog._id %>" method="post">
                 <div class="mb-3">
                     <input type="text" name="content" class="form-control" placeholder="Enter your comment">
                     <button class="btn btn-primary mt-3" type="submit">Add</button>
@@ -36,10 +36,10 @@
             <% } %>
             <div class="mt-3">
                 <% comments.forEach(comment => { %>
-                 <div>
+                <div>
                     <img src="<%= comment.createdBy.profileImageURL %>" width="50px"><%= comment.createdBy.fullName %>
                     <pre><%= comment.content %></pre>
-                 </div>
+                </div>
                 <% }) %>
             </div>
         </div>

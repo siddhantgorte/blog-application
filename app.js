@@ -13,6 +13,9 @@ const { checkForAuthenticationCookie } = require( './middlewares/authentication'
 const Blog = require( './models/blog' )
 
 const app = express()
+
+// app.use("/uploads", express.static("uploads"));
+
 const PORT = process.env.PORT
 
 mongoose.connect(process.env.MONGO_URL)
